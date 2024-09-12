@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		char operacao;
+		double matriz[][], resultado = 0;
+		int tamanho = 12, linhaMatriz, colunaMatriz, contCelulaMatriz = 0;
+		matriz = new double[tamanho][tamanho];
+		
+		Scanner leitor = new Scanner(System.in);
+		operacao = leitor.next().charAt(0);
+		
+		for(linhaMatriz=0; linhaMatriz<tamanho; linhaMatriz++){
+		    for(colunaMatriz=0; colunaMatriz<tamanho; colunaMatriz++){
+		        matriz[linhaMatriz][colunaMatriz] = leitor.nextDouble();
+		        if(!((colunaMatriz >= linhaMatriz) || (linhaMatriz+colunaMatriz >= tamanho-1))){
+		            resultado = matriz[linhaMatriz][colunaMatriz] + resultado;
+		            contCelulaMatriz++;
+		        }
+		    }
+		}
+		
+		if(operacao == 'M'){
+		    resultado = resultado / contCelulaMatriz;
+		}
+	    
+		System.out.printf("%.1f\n", resultado);
+	}
+}

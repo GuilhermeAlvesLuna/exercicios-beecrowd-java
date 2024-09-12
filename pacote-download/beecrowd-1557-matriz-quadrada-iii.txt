@@ -1,0 +1,161 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		int ordemMatriz;
+		int matriz[][];
+		
+		ordemMatriz = leitor.nextInt();
+		while(ordemMatriz != 0){
+		    matriz = new int[ordemMatriz][ordemMatriz];
+		    
+		    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+		        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+		            matriz[indiceLinha][indiceColuna] = (int) Math.pow(2, indiceLinha+indiceColuna);
+		        }
+		    }
+		    
+		    if(ordemMatriz < 3){
+		        impressao1(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 3 || ordemMatriz == 4){
+		        impressao2(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 5){
+		        impressao3(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 6 || ordemMatriz == 7){
+		        impressao4(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 8 || ordemMatriz == 9){
+		        impressao5(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 10){
+		        impressao6(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 11 || ordemMatriz == 12){
+		        impressao7(matriz, ordemMatriz);
+		    }else if(ordemMatriz == 13 || ordemMatriz == 14){
+		        impressao8(matriz, ordemMatriz);
+		    }else{
+		        impressao9(matriz, ordemMatriz);
+		    }
+		    System.out.println();
+		    ordemMatriz = leitor.nextInt();
+		}
+	}
+	
+	public static void impressao1(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%1d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%1d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao2(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%2d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%2d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao3(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%3d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%3d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao4(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%4d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%4d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao5(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%5d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%5d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao6(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%6d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%6d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao7(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%7d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%7d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao8(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%8d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%8d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+	
+	public static void impressao9(int matriz[][], int ordemMatriz){
+	    for(int indiceLinha=0; indiceLinha<ordemMatriz; indiceLinha++){
+	        for(int indiceColuna=0; indiceColuna<ordemMatriz; indiceColuna++){
+	            if(indiceColuna == ordemMatriz-1){
+	                System.out.printf("%9d", matriz[indiceLinha][indiceColuna]);
+	            }else{
+	                System.out.printf("%9d ", matriz[indiceLinha][indiceColuna]);
+	            }
+	        }
+	        System.out.println();
+		}
+	}
+}

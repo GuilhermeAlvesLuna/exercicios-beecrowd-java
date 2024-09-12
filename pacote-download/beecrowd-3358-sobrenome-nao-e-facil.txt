@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		int quantidadeCasosTeste, tamanhoNome, iterador;
+		String nome, nomeCopia, nao;
+		char vetorNome[];
+		
+		quantidadeCasosTeste = leitor.nextInt();
+		leitor.nextLine();
+		
+		while(quantidadeCasosTeste>0){
+		    nao = "";
+		    nome = leitor.nextLine();
+		    nomeCopia = nome.toLowerCase();
+		    tamanhoNome = nome.length();
+		    vetorNome = new char[tamanhoNome];
+		    vetorNome = nomeCopia.toCharArray();
+		    
+		    for(iterador=0; iterador<tamanhoNome-2; iterador++){
+		        if(vetorNome[iterador] != 'a' && vetorNome[iterador] != 'e' && vetorNome[iterador] != 'i' && vetorNome[iterador] != 'o' && vetorNome[iterador] != 'u'){
+		            if(vetorNome[iterador+1] != 'a' && vetorNome[iterador+1] != 'e' && vetorNome[iterador+1] != 'i' && vetorNome[iterador+1] != 'o' && vetorNome[iterador+1] != 'u'){
+		                if(vetorNome[iterador+2] != 'a' && vetorNome[iterador+2] != 'e' && vetorNome[iterador+2] != 'i' && vetorNome[iterador+2] != 'o' && vetorNome[iterador+2] != 'u'){
+		                    nao = " nao";
+		                    break;
+		                }
+		            }
+		        }
+		    }
+		    
+		    System.out.println(nome + nao + " eh facil");
+		    quantidadeCasosTeste--;
+		}
+	}
+}

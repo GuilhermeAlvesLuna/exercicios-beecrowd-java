@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		int numeroDeCasos, tamanhoVetor, numeroLeds;
+		String casoDeTeste;
+		char vetorCasoDeTeste[];
+		
+		numeroDeCasos = leitor.nextInt();
+        leitor.nextLine();
+		
+		while(numeroDeCasos>0){
+		    numeroLeds = 0;
+		    casoDeTeste = leitor.nextLine();
+		    tamanhoVetor = casoDeTeste.length();
+		    vetorCasoDeTeste = new char[tamanhoVetor];
+		    casoDeTeste.getChars(0, tamanhoVetor, vetorCasoDeTeste, 0);
+		    
+		    for(int iterador=0; iterador<tamanhoVetor; iterador++){
+		        if(vetorCasoDeTeste[iterador] == '1'){
+		            numeroLeds = numeroLeds + 2;
+		        }else if(vetorCasoDeTeste[iterador] == '2' || vetorCasoDeTeste[iterador] == '3' || vetorCasoDeTeste[iterador] == '5'){
+		            numeroLeds = numeroLeds + 5;
+		        }else if(vetorCasoDeTeste[iterador] == '4'){
+		            numeroLeds = numeroLeds + 4;
+		        }else if(vetorCasoDeTeste[iterador] == '7'){
+		            numeroLeds = numeroLeds + 3;
+		        }else if(vetorCasoDeTeste[iterador] == '8'){
+		            numeroLeds = numeroLeds + 7;
+		        }else{
+		            numeroLeds = numeroLeds + 6;
+		        }
+		    }
+		    System.out.println(numeroLeds + " leds");
+		    numeroDeCasos--;
+		}
+	}
+}
